@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="image/book-bookmark.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- bootstarp -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main style -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="title">
+    <h1 class="my-5">Book marker</h1>
+  </div>
+  <div class="container">
+    <div class="inputs d-flex flex-column align-items-center ">
+      <h2 class="my-3"> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+          class="fa-solid fa-bookmark"></i></h2>
+      <div class="input my-3 col-12 ">
+        <label for="BookmarkName" class="mb-2"><i class="fa-solid fa-book-bookmark "></i> Site Name</label>
+        <input type="text" placeholder="Bookmark Name" id="BookmarkName" class="form-control">
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">min character (3) & max character (15) .</div>
+      </div>
+      <div class="input my-3 col-12">
+        <label for="BookmarkUrl" class="mb-2"><i class="fa-solid fa-link"></i> Site URL</label>
+        <input type="url" placeholder="Bookmark Name" id="BookmarkUrl" class="form-control">
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">This field must contain URL.</div>
+      </div>
+      <button class="btn btn-danger px-5 mb-4" id="submitBtn">Submit</button>
+    </div>
+    <table class="table text-center mt-5">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id="alert" class="d-none">
+      <div>
+        <h2>rechecking</h2>
+        <p><i class="fa-solid fa-book-bookmark "></i> Please recheck Book Name input</p>
+        <p><i class="fa-solid fa-link"></i> Please recheck Book url input</p>
+        <button id="alertbtn" class="btn btn-danger">ok</button>
+      </div>
+    </div>
+    <div class="popup">
+      <div>
+        <button onclick="closePopUp()" id="closePopUp" class="btn ms-auto me-3"><i class="fa-solid fa-xmark"></i></button>
+        <h3>This site contains verification functions 😇</h3>
+      </div>
+    </div>
+  </div>
+  <!-- bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
